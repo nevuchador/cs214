@@ -1,0 +1,102 @@
+test files include: testdir(directory), testdir1(directory)
+
+notice: if you use the file I provided, please change the symbolic link under testdir/testdir2/. once the file is moved, the link breaks.
+
+***test case 1(enable -n):
+
+{"list" : [
+	  {"be" : [ 
+		  {"testdir/1.txt" : 1}
+	  ]},
+	  {"do" : [ 
+		  {"testdir/1.txt" : 1}
+	  ]},
+	  {"evil" : [ 
+		  {"testdir/1.txt" : 1}
+	  ]},
+	  {"go" : [ 
+		  {"testdir/3.txt" : 3}
+	  ]},
+	  {"hello" : [ 
+		  {"testdir/1.txt" : 1}
+	  ]},
+	  {"hi" : [ 
+		  {"testdir/1.txt" : 3},
+		  {"testdir/3.txt" : 3}
+	  ]},
+	  {"not" : [ 
+		  {"testdir/1.txt" : 1}
+	  ]},
+	  {"world" : [ 
+		  {"testdir/1.txt" : 1}
+	  ]}
+]}
+
+
+
+error info:
+
+testdir/notquiteasy is not a ascii file.
+testdir/testdir2/symboliclinkTOtestdir1 cannot be read.
+testdir/testdir3/test/2.txt
+errno 13: Permission denied
+The inverted-index file alrealy exists.
+Rewrite it?(y/n)
+y
+
+
+
+
+
+***test case 2(without -n)
+
+{"list" : [
+	  {"be" : [ 
+		  {"testdir/1.txt" : 1}
+	  ]},
+	  {"do" : [ 
+		  {"testdir/1.txt" : 1},
+		  {"testdir/testdir2/symboliclinkTOtestdir1/testdir4/5.txt -> /Users/sac7e/Program/testdir1/testdir4/5.txt" : 1}
+	  ]},
+	  {"evil" : [ 
+		  {"testdir/1.txt" : 1}
+	  ]},
+	  {"go" : [ 
+		  {"testdir/3.txt" : 3},
+		  {"testdir/testdir2/symboliclinkTOtestdir1/4.txt -> /Users/sac7e/Program/testdir1/4.txt" : 3}
+	  ]},
+	  {"hello" : [ 
+		  {"testdir/1.txt" : 1},
+		  {"testdir/testdir2/symboliclinkTOtestdir1/testdir4/5.txt -> /Users/sac7e/Program/testdir1/testdir4/5.txt" : 1}
+	  ]},
+	  {"hi" : [ 
+		  {"testdir/1.txt" : 3},
+		  {"testdir/3.txt" : 3},
+		  {"testdir/testdir2/symboliclinkTOtestdir1/testdir4/5.txt -> /Users/sac7e/Program/testdir1/testdir4/5.txt" : 4}
+	  ]},
+	  {"not" : [ 
+		  {"testdir/1.txt" : 1},
+		  {"testdir/testdir2/symboliclinkTOtestdir1/testdir4/5.txt -> /Users/sac7e/Program/testdir1/testdir4/5.txt" : 1}
+	  ]},
+	  {"say" : [ 
+		  {"testdir/testdir2/symboliclinkTOtestdir1/testdir4/5.txt -> /Users/sac7e/Program/testdir1/testdir4/5.txt" : 1}
+	  ]},
+	  {"world" : [ 
+		  {"testdir/1.txt" : 1},
+		  {"testdir/testdir2/symboliclinkTOtestdir1/4.txt -> /Users/sac7e/Program/testdir1/4.txt" : 1}
+	  ]}
+]}
+
+
+
+error info:
+
+testdir/notquiteasy is not a ascii file.
+/Users/sac7e/Program/testdir/testdir2/symboliclinkTOtestdir1 is a symbolic link.
+testdir/testdir3/test/2.txt
+errno 13: Permission denied
+The inverted-index file alrealy exists.
+Rewrite it?(y/n)
+y
+
+

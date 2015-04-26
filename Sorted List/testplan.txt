@@ -1,0 +1,20 @@
+Test Plan
+
+===============
+
+*** Test Case 1
+
+**Input:
+
+1 8 7 3 6 2 5 4 9 0
+
+**Output:
+
+9	8	7	6	5	4	3	2	1	0	
+This iterator is invalid.
+9	8	6	5	4	3	2	1	0	
+
+**Three steps in main function.
+1. output all the elements.
+2. remove the third one, and use SLNextItem to access the next item to the third one.
+3. output all the elements again.

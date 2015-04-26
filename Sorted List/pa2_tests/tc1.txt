@@ -1,0 +1,26 @@
+
+Test case 9: Create a lot of iterators on a single list: 
+	Test9a: Iter got Alpha
+
+	Test9b: Iter got Bravo
+	Test9b: Iter got Alpha
+
+	Test9c: Iter got Charlie
+	Test9c: Iter got Bravo
+	Test9c: Iter got Alpha
+
+	Test9d: Iter got Delta
+	Test9d: Iter got Charlie
+	Test9d: Iter got Bravo
+	Test9d: Iter got Alpha
+
+	Test9e: Iter got Echo
+Error: 	Test9e: Iter reached -1 items instead of 3
+
+
+Test case 6: Create and interate through a list with multiple ints: 
+Error: 	Test6: Iter got 1 instead of 5
+	Test6: Iter got 4
+	Test6: Iter got 3
+Error: 	Test6: Iter got 5 instead of 2
+Error: 	Test6: Iter got 2 instead of 1

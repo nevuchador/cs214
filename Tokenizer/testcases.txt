@@ -1,0 +1,28 @@
+Input: 
+	./tokenizer "+= $(echo -e "hello\fgood\v\vworld")"
+Output:
+	plusequals "+="
+	word "hello"
+	ERROR: [0x0c]
+	word "good"
+	ERROR: [0x0b]
+	ERROR: [0x0b]
+	word "world"
+
+Input:
+	./tokenizer "Do not be evil ."
+Output:
+	word "Do"
+	word "not"
+	word "be"
+	word "evil"
+	period "."
+
+Input:
+	./tokenizer "0x321 0213 7.43 342 0Xfads"
+Output:
+	hex constant "0x321"
+	octal constant "0213"
+	float "7.43"
+	integer "342"
+	hex constant "0Xfads"

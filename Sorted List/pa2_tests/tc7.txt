@@ -1,0 +1,14 @@
+
+Test case 7: Create and interate through a list with multiple strs: 
+Error: 	Test7: Iter got Charlie instead of Echo
+Error: 	Test7: Iter got Bravo instead of Delta
+Error: 	Test7: Iter got Echo instead of Charlie
+Error: 	Test7: Iter got Alpha instead of Bravo
+Error: 	Test7: Iter got Delta instead of Alpha
+
+Test case 7: Create and interate through a list with multiple strs: 
+	Test7: Iter got Echo
+	Test7: Iter got Delta
+	Test7: Iter got Charlie
+	Test7: Iter got Bravo
+	Test7: Iter got Alpha

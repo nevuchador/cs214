@@ -1,0 +1,14 @@
+
+Test case 6: Create and interate through a list with multiple ints: 
+Error: 	Test6: Iter got 1 instead of 5
+	Test6: Iter got 4
+	Test6: Iter got 3
+Error: 	Test6: Iter got 5 instead of 2
+Error: 	Test6: Iter got 2 instead of 1
+
+Test case 6: Create and interate through a list with multiple ints: 
+	Test6: Iter got 5
+	Test6: Iter got 4
+	Test6: Iter got 3
+	Test6: Iter got 2
+	Test6: Iter got 1
