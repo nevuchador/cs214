@@ -1,0 +1,33 @@
+#####test plan for pa5
+
+
+###test case 1； pointer never allocated.
+
+#output:
+
+test case 1: pointer never allocated
+this block was never allocated by malloc. at line 24 in main.c
+
+
+###test case 2: pointer not returned from malloc
+
+#output:
+
+test case 2: pointer not returned from malloc
+this pointer is invalid. at line 33 in main.c
+
+
+###test case 3: redundant free
+
+#output:
+
+test case 3: redundant free
+this pointer is invalid. at line 44 in main.c
+
+
+###test case 4: valid operation
+
+#output:
+
+test case 4: valid operation
+nbp-248-254:pa5 sac7e$ 
